@@ -24,12 +24,6 @@ Waves with obstacles:
 
 ![Waves with obstacles](doc/SEN/inc/img/demowithobst.png)
 
-The obstacle menu, the wave source menu, and the lighting menu:
-
-![Obstacle menu](doc/SEN/inc/img/obstaclesmenu.png)
-![Wave source menu](doc/SEN/inc/img/wavesourcemenu.png)
-![Lighting menu](doc/SEN/inc/img/lightingmenu.png)
-
 ## Performance
 
 Frame generation time measured with an increasing number of obstacles (Intel Core i5-10300H, NVIDIA GeForce GTX 1650, Ubuntu 22.04):
