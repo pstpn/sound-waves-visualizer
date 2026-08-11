@@ -39,8 +39,8 @@ Frame generation time measured with an increasing number of obstacles (Intel Cor
 
 ## Documentation
 
-The repository contains the full coursework documentation (in Russian): the report `doc/SEN/РПЗ.pdf`, the presentation `doc/Presentation/presentation.pdf`, diagrams in `doc/SEN/diagrams/`, measurements in `doc/SEN/measures/`, and the LaTeX sources in `doc/SEN/report.tex`.
+The full coursework documentation is available in the `doc/` directory (in Russian).
 
 ## Build
 
-The project is built in Visual Studio: open `reborn/CourseWork/CourseWork.sln` and build the `CourseWork` project. GLFW, GLAD, GLM, Dear ImGui and assimp are external dependencies and are expected next to the solution as configured in `.gitignore`.
+Open `reborn/CourseWork/CourseWork.sln` in Visual Studio and build. The dependencies (GLFW, GLAD, GLM, Dear ImGui, assimp) are not in the repo and are expected next to the solution, as `.gitignore` suggests.
