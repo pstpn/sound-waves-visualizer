@@ -10,10 +10,6 @@ The wave source, its speed and color are configured in a dedicated menu; obstacl
 
 C++, OpenGL 3.3 Core, GLFW, GLAD, GLM, Dear ImGui. Models are loaded through a custom OBJ loader.
 
-## Project Structure
-
-The source code lives in `reborn/CourseWork/`. The main loop and camera are in `main.cpp` and `camera.cpp`; scene graph and rendering are in `scene.cpp`; the wave sphere and its collision handling are in `sphere.cpp`; obstacles are in `obstacle.cpp`; model loading and meshes are in `loader.cpp` and `mesh.cpp`; the ImGui menus are in `gui.hpp`; shaders are in `shaders/`.
-
 ## Examples of Work
 
 Waves in an empty room:
