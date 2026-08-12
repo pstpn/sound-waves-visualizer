@@ -1,31 +1,35 @@
-# Sound Waves Visualizer
+# Sound waves visualizer
 
-Visualizer of sound wave propagation in a closed space. A wave is emitted from a point source as an expanding sphere; each point of the wave moves at a given speed and reflects when it hits the room walls or obstacles placed in the scene. The scene is rendered with OpenGL in real time, and the simulation is controlled through an ImGui interface.
+A visualiser of sound wave propagation in a closed space. A wave leaves a point source as an
+expanding sphere, every point of it travels at a set speed, and when it meets a wall or an
+obstacle it reflects. The scene is rendered with OpenGL in real time and driven through an
+ImGui panel.
 
-## Features
+The source, its speed and its colour are set in a menu of their own, obstacles are placed,
+scaled, rotated and recoloured freely, and the light can be moved and tinted with Phong
+shading following it. The camera is free-fly, looking around with the mouse and moving on
+WASD.
 
-The wave source, its speed and color are configured in a dedicated menu; obstacles are placed, scaled, rotated and recolored freely, and the lighting (position and color of the light source) is adjusted with Phong shading. The camera is free-fly with mouse look and WASD movement.
+Written in C++ against OpenGL 3.3 Core with GLFW, GLAD, GLM and Dear ImGui, with a
+hand-written loader for the OBJ models.
 
-## Tech Stack
+## Examples
 
-C++, OpenGL 3.3 Core, GLFW, GLAD, GLM, Dear ImGui. Models are loaded through a custom OBJ loader.
-
-## Examples of Work
-
-Waves in an empty room:
+Waves in an empty room.
 
 ![Waves only](doc/SEN/inc/img/demoonlywaves.png)
 
-Waves with obstacles:
+The same waves reflecting off obstacles.
 
 ![Waves with obstacles](doc/SEN/inc/img/demowithobst.png)
 
 ## Performance
 
-Frame generation time measured with an increasing number of obstacles (Intel Core i5-10300H, NVIDIA GeForce GTX 1650, Ubuntu 22.04):
+Frame time as obstacles are added, measured on an Intel Core i5-10300H with a GeForce GTX
+1650 under Ubuntu 22.04.
 
-| Obstacles | Frame time (µs) |
-|-----------|----------------|
+| Obstacles | Frame time, µs |
+|----------:|---------------:|
 | 1 | 3.241 |
 | 2 | 6.112 |
 | 3 | 9.445 |
@@ -37,10 +41,12 @@ Frame generation time measured with an increasing number of obstacles (Intel Cor
 | 9 | 34.124 |
 | 10 | 37.746 |
 
-## Documentation
-
-The full coursework documentation is available in the `doc/` directory (in Russian).
+Frame time grows linearly with the number of obstacles, since every wave point is checked
+against each of them.
 
 ## Build
 
-Open `reborn/CourseWork/CourseWork.sln` in Visual Studio and build. The dependencies (GLFW, GLAD, GLM, Dear ImGui, assimp) are not in the repo and are expected next to the solution, as `.gitignore` suggests.
+Open `reborn/CourseWork/CourseWork.sln` in Visual Studio and build. The dependencies are
+expected next to the solution and are not kept in the repository.
+
+The coursework text is in `doc/`.
